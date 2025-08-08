@@ -1,0 +1,451 @@
+   *{
+   	box-sizing: border-box;
+   	font-family: 'Segoe UI';
+   }
+
+
+
+body, html{
+	padding: 0;
+	margin: 0;
+
+ }
+
+ .header-box{
+ 	background: #003366;
+ 	height: 60px;
+ 	width: 100%;
+ 	box-shadow: 0 0 25px #033;
+    color: #fff;
+    /* position: fixed;
+    top: 0; */
+}
+
+.header-box header{
+	width: 80vw;
+	height: 60px;
+	background: #000;
+	margin: auto auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+ .header-box header .logo{
+ 	width: 150px;
+ }
+ .header-box header .logo img{
+ 	width: 60%;
+ }
+ .header-box header nav ul{
+ 	display: flex;
+ 	flex-direction: row;
+ 	list-style: none;
+ 	margin: 0; padding: 0;
+ 	
+ }
+ .header-box header nav ul li a{
+ 	color: #fff; padding: 0 2em;
+ 	font-weight: 700; display: block;
+ 	text-decoration: none;
+ 	height: 60px; line-height: 60px;
+ 	border-bottom: 0px solid transparent;
+ 	transition: 0.9s all;
+ }
+ .header-box header nav ul li a:hover{
+ 	background: #006699;
+ 	border-bottom: 5px solid #f00;
+ }
+
+ .header-box header nav ul li ul{
+    background: #006699;
+    position: absolute;
+    flex-direction: column;
+    min-width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s all;
+    opacity: 0; border-radius: 0 0 10px 10px;
+    border-bottom: 0 solid transparent;
+ }
+
+.header-box header nav ul li:hover ul{
+    max-height: 500px;
+    opacity: 1;
+ }
+
+ .header-box header nav ul li ul li a:hover {
+    border-bottom: 0px solid transparent;
+    background: #6699ff;   
+ }
+
+ .header-box header nav ul li:hover>a{
+    background: #336699;
+ }
+
+ .header-box header nav ul li ul:hover{
+   border-bottom: 5px solid #ff0000;
+ }
+
+ .header-box header #miniBtn, #miniApp{
+    display: none;
+ }
+
+  .header-box header .title{
+        font-size: 2em;
+        padding: 5px;
+        font-weight: 100;
+        text-transform: uppercase;
+        max-height: 50px;
+ }   
+
+.hero-box{
+    width: 100vw;
+    height: 90vh;
+    background: linear-gradient(
+        rgba(50, 150, 200, 0.5),
+        rgba(250, 250, 0, 0.5),
+        rgba(25, 25, 25, 0.5)),
+  url('../img/Bee\ Irabere.jpg');
+  background-size: cover ;
+  margin-top: 60px;
+
+}
+
+.hero-box .hero-text{
+    align-items: center;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    width: 70vw;
+    padding: 1em;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 2px #036;
+    border-radius: 20px;
+    border: 0px inset rgba(255, 55, 55, 0,5);
+}
+
+.hero-box .hero-text h1{
+    font-size: 7em;
+    text-shadow: 5px 5px 2px #036;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    font-family: vivaldi ;
+  
+}
+
+.btn-flat{
+    background: orangered;
+    display: inline-block;
+    width: auto; margin-top: 20px;
+    padding: 0.5em; 
+    font-size: 1em;
+    color: #fff; text-decoration: none;
+    box-shadow: 3px 3px 1px #036;
+}
+
+.btn-flat :hover{
+    background: #ff6600;
+}
+
+.message{
+    background: #024;
+    color: #fff;
+    padding: 1.5em;
+    width: 80vw;
+    margin: -50px auto;
+}
+.message p{
+    padding: 0;
+    margin: 0;
+}
+
+.showcase{
+    width: 80vw;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.details{
+    width: 80vw;
+    margin: 80px auto;
+    padding: 2em;
+}
+
+.content{
+    width: 80vw;
+    margin: 80px auto;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.showcase .showcase-img,
+.showcase .showcase-text{
+    width: 50%;
+    margin: 1em;
+    text-align: justify;
+}
+
+.details .details-img,
+.details .details-text{
+    width: 100%;
+    margin: 0em;
+    text-align: justify;
+}
+
+.showcase .showcase-img img{
+    width: 70%;
+    border: 1px solid #abc;
+    padding: 0.5em;
+    background: #fff;
+}
+
+.details .details-img img{
+    width: 100%;
+    border: 1px solid #abc;
+    padding: 0.5em;
+    background: #fff;
+}
+
+.showcase:nth-child(odd){
+    background: #ddd;
+}
+
+.blog{
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.blog header h1,
+.blog header p{
+    margin: 0;
+    padding: 0;
+}
+
+.blog header hr{
+    border: 0;
+    border-top: 1px solid #abc;
+    width: 30%;
+}
+
+.blog .blog-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    text-align: justify;
+}
+
+.blog .blog-container .snippet{
+    width: 30%;
+    margin: 1em;
+    box-shadow: 3px 3px 5px #dfdfdf;
+    padding: 0.5rem;
+}
+
+.blog .blog-container .snippet .snippet-img,
+.blog .blog-container .snippet .snippet-text{
+    width: 100%;
+}
+
+.blog .blog-container .snippet-img{
+    transform: rotate(15deg) scale(1.4);
+    filter: grayscale(50%);
+    transition: 0.5s all;
+}
+
+.blog .blog-container .snippet figure{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blog .blog-container .snippet img:hover{
+    transform: rotate(0deg) scale(1.1);
+    filter: grayscale(0%);
+}
+
+.footer{
+    background: #024;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    justify-content: space-between;
+    font-size: 1.1em;
+}
+
+.foto img{
+    width: 90px;
+}
+
+.footer .box-footer{
+    width: 28%;
+}
+
+.footer .col-b{
+    text-align: center;
+}
+
+.footer .col-c{
+    text-align: right;
+}
+
+.footer span{
+    display: block;
+}
+
+
+/*..................mobile screen..............*/
+
+ @media screen and (max-width: 768px){
+    
+    .header-box header #miniBtn{
+        display: flex;
+        font-size: 2.5em;
+        padding: 0 0.5em;
+        cursor: pointer;
+    }
+
+    .details{
+        width: 100vw;
+        margin: 80px auto;
+        padding: 2em;
+    }
+
+    .details .details-img,
+    .details .details-text{
+    width: 100%;
+    margin: 0em;
+    text-align: justify;
+}
+
+
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer .box-footer{
+        width: 100%;
+    }
+
+    .footer .col-c{
+        text-align: center;
+        border-top: 1px dashed #fff;
+        margin-top: 1em;
+        padding: 1em;
+    }
+
+    .blog{
+        width: 100%;
+        padding: 1em;
+    }
+
+    .blog .blog-container .snippet{
+        width: 100%;
+        flex-direction: column;
+         box-shadow: 0px 0px 5px #ccc ;
+    }
+
+    .showcase{
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+    padding: 2em;
+    }
+
+.showcase .showcase-img,
+.showcase .showcase-text{
+    width: 100%;
+    margin: 0em;
+}
+
+    .message{
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-box .hero-text{
+        width: 100%;
+        border-radius: 0;
+    }
+
+     .hero-box .hero-text h1{
+        font-size: 2.5em;
+     }
+
+     .header-box .hero-text p{
+        display: none;
+     }
+
+    .header-box header{
+        width: 100%;
+    }
+
+    .header-box header .title{
+        font-size: 2em;
+        position: absolute;
+        left: 70px;
+        padding: 5px;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    .header-box header nav ul{
+        flex-direction: column;
+        background: #002244;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        width: 100%;
+    }
+
+    .header-box header .logo{
+        z-index: 100;   width: 90px;
+        right: 20px;    top: 10px;
+        position: absolute;
+       
+    }
+
+     .header-box header nav ul li ul{
+        left: 35%;
+
+    }
+
+    .header-box header:hover #miniBtn{
+        background: #002244;
+    }
+
+    .header-box header nav{
+        display: none;
+    }  
+
+     .header-box header input:checked ~ nav{
+        display: flex;
+     } 
+ }
+ form {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 4px solid #16e454;
+    border-radius: 10px;
+    color: #b418ac;
+    font-size: 20px;
+    font-weight: bold;
+ }
+input, textarea {
+    width: 180px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 4px solid #3110c5;
+}
